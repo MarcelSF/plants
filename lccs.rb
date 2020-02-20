@@ -28,11 +28,11 @@ ROUTING
     resources :plant_tags, only: [ :new, :create ]
   end
 
-PLANT TAGS controller
+CREATE PLANT_TAGS controller
 
   rails g controller plant_tags
 
-PLANT_TAGS NEW METHOD
+CREATE PLANT_TAGS NEW METHOD
 
   def new
     @plant = Plant.find(params[:plant_id])
@@ -40,7 +40,7 @@ PLANT_TAGS NEW METHOD
   end
 
 
-FORM FOR NEW PLANT TAG
+CREATE FORM FOR NEW PLANT TAG
 
   <div class="container">
     <div class="row justify-content-center">
@@ -105,7 +105,8 @@ ADDING SELECT2 and jquery
 
 CONFIGURATION (add the multiple-select class to your select input)
 
-// app/javascript/components/select.js
+# in -> app/javascript/components/select.js
+
 import $ from 'jquery';
 import select2 from 'select2';
 
@@ -117,7 +118,7 @@ const multipleSelect = () => {
 
 export { multipleSelect };
 
-IMPORTING SELECT2 (app/javascript/packs/application.js.)
+IMPORTING SELECT2 # in -> app/javascript/packs/application.js
 
 import 'select2/dist/css/select2.css'; // <-- you'll need to uncomment the stylesheet_pack_tag in the layout /!\
 
